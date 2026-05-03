@@ -2295,6 +2295,360 @@ window.QUESTIONS = [
     ],
     "answer_index": 0,
     "explanation": "Coin flips are independent events: each flip has its own 1/2 probability of heads regardless of past outcomes.\nBelieving that past results affect future independent trials is the \"gambler's fallacy.\"\n(Past outcomes DO matter for dependent events, like drawing cards without replacement — but a coin's behavior doesn't change between flips.)"
+  },
+
+  /* ============================================================
+     BATCH 4 — Coverage gaps from real Praxis 5003 examples (22)
+     Targets: charts/graphs, picture-based, algebra at Praxis level,
+     and several questions matching ones Alexa got wrong.
+     ============================================================ */
+
+  /* --- Numbers & Operations --- */
+  {
+    "id": "no-pv-009",
+    "domain": "numbers_operations",
+    "topic": "place_value",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What number is represented by the base-10 expression below?\n\n(0 × 10⁴) + (4 × 10³) + (0 × 10²) + (5 × 10¹) + (2 × 10⁰)",
+    "choices": ["452", "4,052", "4,520", "40,052"],
+    "answer_index": 1,
+    "explanation": "Compute each term:\n0 × 10⁴ = 0 × 10,000 = 0\n4 × 10³ = 4 × 1,000 = 4,000\n0 × 10² = 0 × 100 = 0\n5 × 10¹ = 5 × 10 = 50\n2 × 10⁰ = 2 × 1 = 2\nSum: 0 + 4,000 + 0 + 50 + 2 = 4,052."
+  },
+  {
+    "id": "no-pv-010",
+    "domain": "numbers_operations",
+    "topic": "place_value",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "0.7 is 1/1,000 of what number?",
+    "choices": ["0.0007", "0.007", "70", "700"],
+    "answer_index": 3,
+    "explanation": "Let x be the unknown number. The relationship 0.7 = (1/1,000) × x means x is one thousand times 0.7.\nSolve: x = 0.7 × 1,000 = 700.\nCommon error: dividing 0.7 ÷ 1,000 = 0.0007 instead of multiplying. Read carefully — 0.7 is the SMALL piece (1/1,000th), so the unknown is the LARGE number."
+  },
+  {
+    "id": "no-fr-011",
+    "domain": "numbers_operations",
+    "topic": "fractions",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Two friends shared a dessert. One ate 1/2 of the dessert, and the other ate 1/3 of the **remaining** part. What fraction of the dessert was left over?",
+    "choices": ["1/6", "1/3", "1/2", "5/6"],
+    "answer_index": 1,
+    "explanation": "After the first friend: 1 − 1/2 = 1/2 of the dessert remains.\nThe second friend ate 1/3 of that remaining 1/2: (1/3) × (1/2) = 1/6 of the whole dessert.\nLeft over: 1/2 − 1/6 = 3/6 − 1/6 = 2/6 = 1/3.\nKey: \"1/3 of the remaining\" means 1/3 of 1/2 (= 1/6), NOT 1/3 of the whole dessert."
+  },
+  {
+    "id": "no-fr-012",
+    "domain": "numbers_operations",
+    "topic": "fractions",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A painter used 1 1/2 cans of paint to paint 2/3 of a room. At this rate, how many more cans of paint does the painter need to paint the remainder of the room?",
+    "choices": ["1/2", "3/4", "1", "9/4"],
+    "answer_index": 1,
+    "explanation": "Find the rate first: 1 1/2 cans = 3/2 cans for 2/3 of the room.\nRate = (3/2) ÷ (2/3) = (3/2) × (3/2) = 9/4 cans per whole room.\nRemainder of the room = 1 − 2/3 = 1/3.\nPaint needed for the remainder: (1/3) × (9/4) = 9/12 = 3/4 can.\n(Quick check: 1/3 is half of 2/3, so the painter needs half of 1 1/2 = 3/4 can.)"
+  },
+  {
+    "id": "no-rp-007",
+    "domain": "numbers_operations",
+    "topic": "ratios_proportions",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": true,
+    "pedagogical": false,
+    "stem": "At an apple orchard, between 280 and 300 bushels of apples are picked each day during peak harvest season. Each bushel contains between 42 and 48 pounds of apples. Which value could be the total number of pounds of apples picked at the orchard in one day during peak harvest season?",
+    "choices": ["10,000", "12,500", "15,000", "16,800"],
+    "answer_index": 1,
+    "explanation": "The total must lie between (minimum bushels × minimum pounds) and (maximum bushels × maximum pounds).\nMinimum total: 280 × 42 = 11,760 pounds.\nMaximum total: 300 × 48 = 14,400 pounds.\nValid range: 11,760 to 14,400.\n10,000 is below the minimum ✗\n12,500 is in range ✓\n15,000 is above the maximum ✗\n16,800 is far above the maximum ✗"
+  },
+
+  /* --- Algebraic Thinking --- */
+  {
+    "id": "al-ex-010",
+    "domain": "algebraic_thinking",
+    "topic": "expressions",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which expression is equivalent to −4(3 − 2x)?",
+    "choices": ["−12 − 8x", "−12 + 8x", "12 − 8x", "−12 + 2x"],
+    "answer_index": 1,
+    "explanation": "Distribute the −4 to each term inside the parentheses:\n−4 × 3 = −12\n−4 × (−2x) = +8x  (negative times negative is positive)\nResult: −12 + 8x.\nCommon error: forgetting that −4 × (−2x) is positive, leaving −8x by mistake."
+  },
+  {
+    "id": "al-ex-011",
+    "domain": "algebraic_thinking",
+    "topic": "expressions",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which expression is equivalent to (2x + 5x − 2) − (x + y − 3y − 5x + 2)?",
+    "choices": [
+      "3x + 4y − 4",
+      "11x − 2y",
+      "11x + 2y − 4",
+      "−2x + 4y"
+    ],
+    "answer_index": 2,
+    "explanation": "First simplify each parenthesis:\n2x + 5x − 2 = 7x − 2\nx + y − 3y − 5x + 2 = (x − 5x) + (y − 3y) + 2 = −4x − 2y + 2\nNow subtract — distribute the minus to EVERY term in the second:\n(7x − 2) − (−4x − 2y + 2)\n= 7x − 2 + 4x + 2y − 2\n= 11x + 2y − 4."
+  },
+  {
+    "id": "al-ex-012",
+    "domain": "algebraic_thinking",
+    "topic": "expressions",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "In the expression 4x(3x + 2y), what does **2y** represent?",
+    "choices": [
+      "A binomial",
+      "A factor of the whole expression",
+      "A coefficient",
+      "A monomial"
+    ],
+    "answer_index": 3,
+    "explanation": "Vocabulary check:\n• The whole expression has TWO factors: 4x and (3x + 2y).\n• The expression (3x + 2y) is a **binomial** (two terms).\n• Within that binomial, 3x and 2y are TERMS. Each term is a **monomial** — a single product of a constant and one or more variables.\n• 2y itself is a monomial.\n• The number 2 (without the y) is the **coefficient** of y. So 2 alone would be the coefficient — but the question asks about the whole 2y.\n• 2y is NOT a factor of the whole expression, because it is added inside parentheses, not multiplied at the top level.\nSo 2y is best described as a **monomial**."
+  },
+  {
+    "id": "al-eq-013",
+    "domain": "algebraic_thinking",
+    "topic": "equations_inequalities",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which inequality is equivalent to 4x + 4 ≤ 9x + 8?",
+    "choices": [
+      "x ≤ −4/5",
+      "x ≥ −4/5",
+      "x ≤ 12/5",
+      "x ≥ 12/13"
+    ],
+    "answer_index": 1,
+    "explanation": "Get all x-terms on one side and constants on the other:\n4x + 4 ≤ 9x + 8\nSubtract 4x from both sides: 4 ≤ 5x + 8.\nSubtract 8 from both sides: −4 ≤ 5x.\nDivide both sides by 5 (positive, so direction is preserved): −4/5 ≤ x, equivalently x ≥ −4/5."
+  },
+  {
+    "id": "al-eq-014",
+    "domain": "algebraic_thinking",
+    "topic": "equations_inequalities",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": true,
+    "pedagogical": true,
+    "stem": "Gym G's membership cost (y, in dollars) for x months follows the data:\n  x = 12 → y = 350\n  x = 24 → y = 650\n\nGym H's cost is given by the equation 2y − 50x = 85.\n\nWhich statement is true comparing Gym H to Gym G?",
+    "choices": [
+      "Gym G is more expensive than Gym H by a fixed amount, regardless of the number of months.",
+      "Gym H has a higher initial fee than Gym G but a lower monthly fee.",
+      "Gym H is more expensive for short memberships but cheaper for long memberships.",
+      "Both gyms charge the same total cost for any number of months."
+    ],
+    "answer_index": 0,
+    "explanation": "Find each gym's linear equation y = mx + b.\nGym G: slope = (650 − 350) / (24 − 12) = 300/12 = 25 dollars/month. Intercept: 350 − 25(12) = 50. So y = 25x + 50.\nGym H: 2y − 50x = 85 → 2y = 50x + 85 → y = 25x + 42.50.\nCompare:\n• Same monthly fee (slope = 25 for both).\n• Gym G's initial fee ($50) is HIGHER than Gym H's ($42.50).\n• Difference: Gym G − Gym H = $7.50, **for every value of x**.\nSo Gym G always costs $7.50 more than Gym H. Equal slopes mean the lines are parallel — there is no crossover, no \"cheaper for short / more for long.\""
+  },
+  {
+    "id": "al-fn-009",
+    "domain": "algebraic_thinking",
+    "topic": "functions",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "An input-output table shows:\n  x:  1   2   3   4\n  y:  1   4   9   16\n\nWhich rule matches the table?",
+    "choices": ["y = x + 3", "y = 4x", "y = x²", "y = 2x − 1"],
+    "answer_index": 2,
+    "explanation": "Test each rule against the table.\ny = x²: 1²=1 ✓, 2²=4 ✓, 3²=9 ✓, 4²=16 ✓. All four points fit.\nNote that the y-values grow by 3, then 5, then 7 — increasingly larger gaps. That non-constant growth rules out any LINEAR rule (constant slope), which is why y = x + 3, y = 4x, and y = 2x − 1 all fail."
+  },
+  {
+    "id": "al-fn-010",
+    "domain": "algebraic_thinking",
+    "topic": "functions",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "The formula V = IR relates the voltage V (in volts), the current I (in amperes), and the resistance R (in ohms) in a circuit. What is the current, in amperes, produced by a 9-volt battery in a circuit with 4 ohms of resistance?",
+    "answer": "2.25",
+    "explanation": "Solve V = IR for I by dividing both sides by R:\nI = V / R = 9 / 4 = 2.25 amperes.\n(Equivalent fraction: 9/4. Some test interfaces accept either form.)"
+  },
+  {
+    "id": "al-ps-010",
+    "domain": "algebraic_thinking",
+    "topic": "patterns_sequences",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "The first six terms of a sequence are:\n1, 1, 2, 3, 5, 8, ...\n\nWhich formula generates the terms of this sequence?",
+    "choices": [
+      "aₙ = aₙ₋₁ + 1",
+      "aₙ = aₙ₋₁ × 2",
+      "aₙ = aₙ₋₁ + aₙ₋₂  (with a₁ = a₂ = 1)",
+      "aₙ = n²"
+    ],
+    "answer_index": 2,
+    "explanation": "Test the pattern: each term equals the sum of the two before it.\n1 + 1 = 2 ✓\n1 + 2 = 3 ✓\n2 + 3 = 5 ✓\n3 + 5 = 8 ✓\nThis is the famous Fibonacci sequence. Its formula is recursive: each term depends on the two previous terms, with starting values a₁ = 1 and a₂ = 1."
+  },
+  {
+    "id": "al-ps-011",
+    "domain": "algebraic_thinking",
+    "topic": "patterns_sequences",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A pattern of figures starts:\n  Figure 1: 1 square in the middle, with 1 triangle attached to its left side and 1 triangle attached to its right side.\n  Figure 2: 2 squares in a row, with the same triangles on the left and right ends.\n  Figure 3: 3 squares in a row, with the same triangles on the left and right ends.\n\nEach figure adds one more square than the figure before. How many line segments are in Figure 10?",
+    "choices": ["32", "35", "38", "41"],
+    "answer_index": 1,
+    "explanation": "Count systematically.\nN squares in a row share interior sides, so they contribute 3N + 1 line segments (the first square: 4 sides; each additional square: 3 new sides — top, bottom, right — sharing its left side with the previous square's right side).\nThe two triangles attach to the leftmost square's left side and the rightmost square's right side. Those shared sides are already counted with the squares. Each triangle adds 2 new (outer) segments. Total triangle contribution: 2 × 2 = 4.\nFormula: 3N + 1 + 4 = 3N + 5.\nFigure 10: 3(10) + 5 = 35.\n(Sanity check: Figure 1 = 8, Figure 2 = 11, Figure 3 = 14 — matches \"+3 per new figure.\")"
+  },
+
+  /* --- Geometry / Measurement / Data --- */
+  {
+    "id": "gm-sh-008",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A net (an unfolded shape) consists of one square in the middle, with a triangle attached to each of its 4 sides.\n\nWhen the net is folded along the edges of the square, which 3D figure does it form?",
+    "choices": ["Cube", "Triangular prism", "Square pyramid", "Triangular pyramid"],
+    "answer_index": 2,
+    "explanation": "Identify the faces:\n• 1 square + 4 triangles meeting at a single apex = a SQUARE PYRAMID (the square is the base).\nNot the others:\n• A cube has 6 squares (no triangles).\n• A triangular prism has 2 triangles + 3 rectangles.\n• A triangular pyramid (tetrahedron) has 4 triangles total — no square base."
+  },
+  {
+    "id": "gm-ar-011",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": true,
+    "pedagogical": false,
+    "stem": "A rectangular garden is 5 3/4 feet wide and 7 1/2 feet long. What is the area of the garden, in square feet?",
+    "choices": ["26 1/2", "35 3/8", "36 1/8", "43 1/8"],
+    "answer_index": 3,
+    "explanation": "Area = length × width.\nConvert mixed numbers to improper fractions:\n5 3/4 = 23/4\n7 1/2 = 15/2\nMultiply: (23/4) × (15/2) = (23 × 15) / (4 × 2) = 345/8.\nConvert back: 345 ÷ 8 = 43 remainder 1, so 345/8 = 43 1/8.\nArea = 43 1/8 square feet."
+  },
+  {
+    "id": "gm-ar-012",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "The surface area of a cube is 54 square inches. What is the volume of the cube, in cubic inches?",
+    "choices": ["27", "54", "81", "108"],
+    "answer_index": 0,
+    "explanation": "A cube has 6 identical square faces, each with area s² (where s is the edge length). So surface area = 6s².\nSet up and solve:\n6s² = 54\ns² = 9\ns = 3 inches.\nVolume of a cube = s³ = 3 × 3 × 3 = 27 cubic inches.\nCommon errors:\n• Treating 54 as the volume directly — but 54 is the SURFACE AREA.\n• Finding s = 3 but forgetting to cube it.\n• Computing 6 × 3² × 3 = 162 by mixing formulas."
+  },
+  {
+    "id": "gm-tr-006",
+    "domain": "geometry_measurement_data",
+    "topic": "transformations",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Each figure shows an arc on a number line representing a calculation:\n  Figure 1: arc starts at −2 and moves LEFT 5 units, ending at −7.\n  Figure 2: arc starts at 0 and moves LEFT 2 units, ending at −2.\n  Figure 3: arc starts at −7 and moves RIGHT 2 units, ending at −5.\n  Figure 4: arc starts at −7 and moves LEFT 2 units, ending at −9.\n\nWhich figure represents the calculation −7 − (−2)?",
+    "choices": ["Figure 1", "Figure 2", "Figure 3", "Figure 4"],
+    "answer_index": 2,
+    "explanation": "Subtracting a negative is the same as adding a positive:\n−7 − (−2) = −7 + 2 = −5.\nSo on a number line, start at −7 and move 2 units to the RIGHT (because we're adding 2). The result is −5.\nFigure 3 matches: starts at −7, moves right 2 units, lands at −5.\nFigure 4 (moving LEFT 2 from −7) would represent −7 − 2 = −9 — different problem."
+  },
+  {
+    "id": "gm-cp-006",
+    "domain": "geometry_measurement_data",
+    "topic": "coordinate_plane",
+    "grade_band": "5-6",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "On a coordinate plane, four points are plotted:\n  Point J at (−4, 3)\n  Point K at (3, 2)\n  Point L at (2, −3)\n  Point M at (−3, −2)\n\nWhich point is located in Quadrant I?",
+    "choices": ["Point J", "Point K", "Point L", "Point M"],
+    "answer_index": 1,
+    "explanation": "Quadrant I has positive x AND positive y (upper-right of the coordinate plane).\nJ = (−4, 3): x negative → Quadrant II.\nK = (3, 2): both positive → Quadrant I ✓\nL = (2, −3): y negative → Quadrant IV.\nM = (−3, −2): both negative → Quadrant III."
+  },
+  {
+    "id": "gm-dd-007",
+    "domain": "geometry_measurement_data",
+    "topic": "data_displays",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Two boxplots compare annual incomes (in thousands of dollars) for two professions:\n  Profession X: minimum 60, Q1 80, **median 90**, Q3 110, maximum 130.\n  Profession Y: minimum 10, Q1 20, **median 30**, Q3 40, maximum 50.\n\nWhich statement is supported by the boxplots?",
+    "choices": [
+      "The median income of Profession X is 3 times the median income of Profession Y.",
+      "Profession X and Profession Y have the same range.",
+      "Profession Y has a wider range of incomes than Profession X.",
+      "The maximum income of Profession Y is greater than the minimum income of Profession X."
+    ],
+    "answer_index": 0,
+    "explanation": "Read the medians from the boxplots (the line inside the box):\nMedian X = 90; Median Y = 30. Ratio: 90 ÷ 30 = 3 ✓\nCheck the others:\n• Range X = 130 − 60 = 70; Range Y = 50 − 10 = 40. Different ✗\n• X has the wider range, not Y ✗\n• Max of Y = 50 < Min of X = 60, so Y's max does NOT exceed X's min ✗"
+  },
+  {
+    "id": "gm-ct-007",
+    "domain": "geometry_measurement_data",
+    "topic": "central_tendency",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Caleb's first 6 quiz scores in his algebra class are:\n90, 90, 95, 90, 85, 90\n\nIf he earns a 95 on his 7th quiz, which statement comparing his 7 quiz scores to his first 6 quiz scores is true?",
+    "choices": [
+      "The mean of the 7 scores is less than the mean of the first 6.",
+      "The mode of the 7 scores is greater than the mode of the first 6.",
+      "The median of the 7 scores is equal to the median of the first 6.",
+      "The range of the 7 scores is greater than the range of the first 6."
+    ],
+    "answer_index": 2,
+    "explanation": "Compute each statistic for the first 6 vs. all 7.\nFirst 6 sorted: 85, 90, 90, 90, 90, 95.\n• Mean = 540/6 = 90.\n• Median = (90 + 90)/2 = 90.\n• Mode = 90 (appears 4 times).\n• Range = 95 − 85 = 10.\nAll 7 sorted: 85, 90, 90, 90, 90, 95, 95.\n• Mean = 635/7 ≈ 90.71 — GREATER (so option A \"less\" is false).\n• Median = 4th value = 90 — SAME ✓\n• Mode = 90 (still 4 times) — SAME (option B \"greater\" is false).\n• Range = 95 − 85 = 10 — SAME (option D \"greater\" is false).\nOnly C is true."
+  },
+  {
+    "id": "gm-pr-006",
+    "domain": "geometry_measurement_data",
+    "topic": "probability",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A flower shop has 5 kinds of flowers (tulips, lilies, daisies, carnations, and roses) and 3 colors of vases (blue, green, and pink). One kind of flower and one color of vase are each chosen at random and independently. What is the probability that the selection is lilies in a pink vase?",
+    "choices": ["1/8", "1/15", "2/15", "1/5"],
+    "answer_index": 1,
+    "explanation": "When two events are independent, the probability of BOTH occurring is the product of the individual probabilities.\nP(lilies) = 1/5 (one of five flower kinds).\nP(pink vase) = 1/3 (one of three colors).\nP(lilies AND pink) = (1/5) × (1/3) = 1/15."
   }
 
 ];
