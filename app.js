@@ -413,8 +413,12 @@
     if (q.pedagogical) tags.push(`<span class="tag pedagogical">Pedagogical</span>`);
     if (q.calculator_allowed === false) tags.push(`<span class="tag no-calc">No calculator</span>`);
     else tags.push(`<span class="tag calc">Calculator OK</span>`);
+    const figureHtml = q.figure && window.Figure
+      ? `<div class="question-figure">${window.Figure.render(q.figure)}</div>`
+      : "";
     qd.innerHTML = `
       <div class="question-meta">${tags.join("")}</div>
+      ${figureHtml}
       <div class="question-stem">${renderText(q.stem)}</div>
     `;
 
@@ -717,6 +721,9 @@
       correctAnsHtml = q.answer_indices.slice().sort().map(j => letterFor(j)).join(", ");
     }
 
+    const reviewFigureHtml = q.figure && window.Figure
+      ? `<div class="question-figure">${window.Figure.render(q.figure)}</div>`
+      : "";
     return `
       <div class="review-q ${status}">
         <div class="review-q-header">
@@ -726,6 +733,7 @@
           <span class="tag">Grade ${escapeHtml(q.grade_band)}</span>
         </div>
         <div class="review-q-stem">${renderText(q.stem)}</div>
+        ${reviewFigureHtml}
         <div class="review-q-answers">
           <div>Your answer: <strong>${yourAnsHtml}</strong></div>
           ${ok ? "" : `<div>Correct answer: <strong>${correctAnsHtml}</strong></div>`}

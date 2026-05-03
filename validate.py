@@ -66,6 +66,11 @@ REQUIRED_BASE_FIELDS = {
     "explanation",
 }
 
+VALID_FIGURE_TYPES = {
+    "numberLine", "numberLineSet", "coordinatePlane", "boxplot",
+    "polygon", "net", "visualPattern", "rectangleGrid", "barChart",
+}
+
 
 def _strip_js_comments(s: str) -> str:
     """Remove /* ... */ and // ... comments. Naive: doesn't account for // or
@@ -192,6 +197,16 @@ def validate_question(q: dict, seen_ids: set):
                 fail(qid, f"answer_indices contains out-of-range value {ai}")
         if len(set(ais)) != len(ais):
             fail(qid, "answer_indices contains duplicates")
+
+    if "figure" in q:
+        fig = q["figure"]
+        if not isinstance(fig, dict):
+            fail(qid, "figure must be an object")
+        if "type" not in fig:
+            fail(qid, "figure must have a 'type' field")
+        if fig["type"] not in VALID_FIGURE_TYPES:
+            fail(qid, f"unknown figure type {fig['type']!r}; "
+                      f"valid: {sorted(VALID_FIGURE_TYPES)}")
 
 
 def main():

@@ -261,6 +261,28 @@ main {
   white-space: pre-wrap;
 }
 
+.question-figure {
+  margin: 0.6rem 0 1rem;
+  text-align: center;
+  overflow-x: auto;
+}
+.figure-svg {
+  max-width: 100%;
+  height: auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.6rem;
+}
+.figure-error {
+  color: var(--wrong);
+  background: var(--wrong-soft);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
 .answer-area {
   margin-bottom: 1rem;
 }

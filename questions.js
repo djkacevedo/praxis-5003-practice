@@ -2051,7 +2051,19 @@ window.QUESTIONS = [
     "format": "multiple_choice",
     "calculator_allowed": false,
     "pedagogical": false,
-    "stem": "A bar graph shows the number of books read by 4 students:\n  Ana: 5\n  Ben: 8\n  Carla: 3\n  David: 6\nWho read the most books?",
+    "figure": {
+      "type": "barChart",
+      "yMax": 10,
+      "yLabel": "Books Read",
+      "xLabel": "Student",
+      "data": [
+        {"label": "Ana", "value": 5},
+        {"label": "Ben", "value": 8},
+        {"label": "Carla", "value": 3},
+        {"label": "David", "value": 6}
+      ]
+    },
+    "stem": "The bar graph above shows the number of books read by four students. Who read the most books?",
     "choices": ["Ana", "Ben", "Carla", "David"],
     "answer_index": 1,
     "explanation": "Compare the counts: Ana 5, Ben 8, Carla 3, David 6.\nThe largest is 8, which is Ben."
@@ -2065,7 +2077,20 @@ window.QUESTIONS = [
     "format": "numeric_entry",
     "calculator_allowed": false,
     "pedagogical": false,
-    "stem": "A bar graph shows daily rainfall:\n  Monday: 1 inch\n  Tuesday: 3 inches\n  Wednesday: 2 inches\n  Thursday: 0 inches\nWhat was the total rainfall over the four days, in inches?",
+    "figure": {
+      "type": "barChart",
+      "yMax": 4,
+      "yTicks": 4,
+      "yLabel": "Inches of Rain",
+      "xLabel": "Day",
+      "data": [
+        {"label": "Mon", "value": 1},
+        {"label": "Tue", "value": 3},
+        {"label": "Wed", "value": 2},
+        {"label": "Thu", "value": 0}
+      ]
+    },
+    "stem": "The bar graph above shows daily rainfall over four days. What was the total rainfall, in inches?",
     "answer": "6",
     "explanation": "Add the values: 1 + 3 + 2 + 0 = 6 inches."
   },
@@ -2521,7 +2546,15 @@ window.QUESTIONS = [
     "format": "multiple_choice",
     "calculator_allowed": false,
     "pedagogical": false,
-    "stem": "A pattern of figures starts:\n  Figure 1: 1 square in the middle, with 1 triangle attached to its left side and 1 triangle attached to its right side.\n  Figure 2: 2 squares in a row, with the same triangles on the left and right ends.\n  Figure 3: 3 squares in a row, with the same triangles on the left and right ends.\n\nEach figure adds one more square than the figure before. How many line segments are in Figure 10?",
+    "figure": {
+      "type": "visualPattern",
+      "figures": [
+        {"squares": 1, "label": "Figure 1"},
+        {"squares": 2, "label": "Figure 2"},
+        {"squares": 3, "label": "Figure 3"}
+      ]
+    },
+    "stem": "The first three figures of a pattern are shown above. Each figure has the same two end triangles plus one more square than the figure before it. How many line segments are in Figure 10?",
     "choices": ["32", "35", "38", "41"],
     "answer_index": 1,
     "explanation": "Count systematically.\nN squares in a row share interior sides, so they contribute 3N + 1 line segments (the first square: 4 sides; each additional square: 3 new sides — top, bottom, right — sharing its left side with the previous square's right side).\nThe two triangles attach to the leftmost square's left side and the rightmost square's right side. Those shared sides are already counted with the squares. Each triangle adds 2 new (outer) segments. Total triangle contribution: 2 × 2 = 4.\nFormula: 3N + 1 + 4 = 3N + 5.\nFigure 10: 3(10) + 5 = 35.\n(Sanity check: Figure 1 = 8, Figure 2 = 11, Figure 3 = 14 — matches \"+3 per new figure.\")"
@@ -2537,7 +2570,18 @@ window.QUESTIONS = [
     "format": "multiple_choice",
     "calculator_allowed": false,
     "pedagogical": false,
-    "stem": "A net (an unfolded shape) consists of one square in the middle, with a triangle attached to each of its 4 sides.\n\nWhen the net is folded along the edges of the square, which 3D figure does it form?",
+    "figure": {
+      "type": "net",
+      "width": 240, "height": 240,
+      "shapes": [
+        {"points": [[80,80],[160,80],[160,160],[80,160]]},
+        {"points": [[80,80],[160,80],[120,18]]},
+        {"points": [[80,160],[160,160],[120,222]]},
+        {"points": [[80,80],[80,160],[18,120]]},
+        {"points": [[160,80],[160,160],[222,120]]}
+      ]
+    },
+    "stem": "The figure above is a net (an unfolded shape). When the net is folded along the edges of the central square, which 3D figure does it form?",
     "choices": ["Cube", "Triangular prism", "Square pyramid", "Triangular pyramid"],
     "answer_index": 2,
     "explanation": "Identify the faces:\n• 1 square + 4 triangles meeting at a single apex = a SQUARE PYRAMID (the square is the base).\nNot the others:\n• A cube has 6 squares (no triangles).\n• A triangular prism has 2 triangles + 3 rectangles.\n• A triangular pyramid (tetrahedron) has 4 triangles total — no square base."
@@ -2579,7 +2623,17 @@ window.QUESTIONS = [
     "format": "multiple_choice",
     "calculator_allowed": false,
     "pedagogical": false,
-    "stem": "Each figure shows an arc on a number line representing a calculation:\n  Figure 1: arc starts at −2 and moves LEFT 5 units, ending at −7.\n  Figure 2: arc starts at 0 and moves LEFT 2 units, ending at −2.\n  Figure 3: arc starts at −7 and moves RIGHT 2 units, ending at −5.\n  Figure 4: arc starts at −7 and moves LEFT 2 units, ending at −9.\n\nWhich figure represents the calculation −7 − (−2)?",
+    "figure": {
+      "type": "numberLineSet",
+      "min": -10, "max": 10,
+      "figures": [
+        {"label": "Figure 1", "arc": {"from": -2, "to": -7}},
+        {"label": "Figure 2", "arc": {"from": 0, "to": -2}},
+        {"label": "Figure 3", "arc": {"from": -7, "to": -5}},
+        {"label": "Figure 4", "arc": {"from": -7, "to": -9}}
+      ]
+    },
+    "stem": "Each of the figures above uses a number line to represent a different calculation.\n\nWhich figure represents the calculation −7 − (−2)?",
     "choices": ["Figure 1", "Figure 2", "Figure 3", "Figure 4"],
     "answer_index": 2,
     "explanation": "Subtracting a negative is the same as adding a positive:\n−7 − (−2) = −7 + 2 = −5.\nSo on a number line, start at −7 and move 2 units to the RIGHT (because we're adding 2). The result is −5.\nFigure 3 matches: starts at −7, moves right 2 units, lands at −5.\nFigure 4 (moving LEFT 2 from −7) would represent −7 − 2 = −9 — different problem."
@@ -2593,7 +2647,17 @@ window.QUESTIONS = [
     "format": "multiple_choice",
     "calculator_allowed": false,
     "pedagogical": false,
-    "stem": "On a coordinate plane, four points are plotted:\n  Point J at (−4, 3)\n  Point K at (3, 2)\n  Point L at (2, −3)\n  Point M at (−3, −2)\n\nWhich point is located in Quadrant I?",
+    "figure": {
+      "type": "coordinatePlane",
+      "xRange": [-5, 5], "yRange": [-5, 5],
+      "points": [
+        {"x": -4, "y": 3, "label": "J"},
+        {"x": 3, "y": 2, "label": "K"},
+        {"x": 2, "y": -3, "label": "L"},
+        {"x": -3, "y": -2, "label": "M"}
+      ]
+    },
+    "stem": "On the coordinate plane above, four points are plotted. Which point is located in Quadrant I?",
     "choices": ["Point J", "Point K", "Point L", "Point M"],
     "answer_index": 1,
     "explanation": "Quadrant I has positive x AND positive y (upper-right of the coordinate plane).\nJ = (−4, 3): x negative → Quadrant II.\nK = (3, 2): both positive → Quadrant I ✓\nL = (2, −3): y negative → Quadrant IV.\nM = (−3, −2): both negative → Quadrant III."
@@ -2607,7 +2671,18 @@ window.QUESTIONS = [
     "format": "multiple_choice",
     "calculator_allowed": false,
     "pedagogical": false,
-    "stem": "Two boxplots compare annual incomes (in thousands of dollars) for two professions:\n  Profession X: minimum 60, Q1 80, **median 90**, Q3 110, maximum 130.\n  Profession Y: minimum 10, Q1 20, **median 30**, Q3 40, maximum 50.\n\nWhich statement is supported by the boxplots?",
+    "figure": {
+      "type": "boxplot",
+      "xRange": [0, 140],
+      "tickStep": 20,
+      "xLabel": "Annual Income (thousands of dollars)",
+      "yLabel": "Profession",
+      "data": [
+        {"label": "X", "min": 60, "q1": 80, "median": 90, "q3": 110, "max": 130},
+        {"label": "Y", "min": 10, "q1": 20, "median": 30, "q3": 40, "max": 50}
+      ]
+    },
+    "stem": "The boxplots above compare the annual incomes of two professions, X and Y. Which statement is supported by the boxplots?",
     "choices": [
       "The median income of Profession X is 3 times the median income of Profession Y.",
       "Profession X and Profession Y have the same range.",
