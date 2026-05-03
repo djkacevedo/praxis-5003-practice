@@ -647,7 +647,7 @@ window.QUESTIONS = [
     "format": "multiple_choice",
     "calculator_allowed": false,
     "pedagogical": true,
-    "stem": "A student calculates a 50% increase of $20 as $50. What is the student's misconception?",
+    "stem": "A student calculates a 50% increase of $20 as $70. What is the student's misconception?",
     "choices": [
       "The student multiplied instead of adding.",
       "The student treated 50% as the number 50, rather than as 50% of the original $20.",
@@ -655,7 +655,7 @@ window.QUESTIONS = [
       "The student should have gotten $40."
     ],
     "answer_index": 1,
-    "explanation": "A 50% increase means add 50% of the original to itself.\n50% of $20 = $10, so a 50% increase of $20 is $20 + $10 = $30.\nThe student got $50 by adding 50 (the literal numeral) to the original 20, instead of adding 50% of 20."
+    "explanation": "A 50% increase means add 50% of the original to itself.\n50% of $20 = $10, so a 50% increase of $20 is $20 + $10 = $30.\nThe student got $70 by adding 50 (the literal numeral) to the original $20, instead of adding 50% of $20 (which is $10)."
   },
 
   /* ============================================================

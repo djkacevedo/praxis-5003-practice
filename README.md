@@ -53,13 +53,16 @@ Site goes live at `https://<you>.github.io/praxis-5003-practice/` in about a min
 
 All questions live in `questions.js` as a `window.QUESTIONS = [...]` array. Each item is a self-describing object — see the schema documented inline in that file.
 
-After editing, validate the bank:
+After editing, validate the bank with both checkers:
 
 ```bash
-python validate.py
+python validate.py    # schema linter
+python verify.py      # independent reference computation per question
 ```
 
-This catches missing fields, out-of-range answer indices, unknown topic tags, duplicate IDs, etc. It exits non-zero on the first error so you know exactly what to fix.
+`validate.py` catches structural problems — missing fields, out-of-range answer indices, unknown topic tags, duplicate IDs.
+
+`verify.py` recomputes each question's answer in pure Python and compares to the stored bank. This is a second, independent computation, so any arithmetic error or answer-index mistake shows up as a `FAIL`. Pedagogical questions (where the "answer" is a misconception explanation rather than a number) are tagged `skip` and need separate prose review.
 
 ## Project structure
 
