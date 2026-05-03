@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praxis 5003 Math Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>Praxis 5003 — Math Practice</h1>
+  <nav>
+    <button class="nav-btn" data-screen="setup">New Session</button>
+    <button class="nav-btn" data-screen="history">History</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============== SETUP SCREEN ============== -->
+  <section id="screen-setup" class="screen active">
+    <h2>Configure your practice session</h2>
+
+    <div class="setup-grid">
+
+      <div class="setup-card">
+        <h3>Mode</h3>
+        <label class="radio">
+          <input type="radio" name="mode" value="practice" checked>
+          <span><strong>Practice</strong><br><small>Immediate per-question feedback</small></span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="mode" value="test">
+          <span><strong>Test</strong><br><small>Feedback only at the end</small></span>
+        </label>
+      </div>
+
+      <div class="setup-card">
+        <h3>Timing</h3>
+        <label class="radio">
+          <input type="radio" name="timing" value="untimed" checked>
+          <span><strong>Untimed</strong></span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="timing" value="timed">
+          <span><strong>Timed</strong> <small>(78 sec/question, scaled from real test)</small></span>
+        </label>
+      </div>
+
+      <div class="setup-card">
+        <h3>Grade band</h3>
+        <select id="filter-grade">
+          <option value="all">All grades</option>
+          <option value="K-2">K–2</option>
+          <option value="3-4">3–4</option>
+          <option value="5-6">5–6</option>
+        </select>
+      </div>
+
+      <div class="setup-card">
+        <h3>Domain</h3>
+        <select id="filter-domain">
+          <option value="all">All domains</option>
+          <option value="numbers_operations">Numbers &amp; Operations</option>
+          <option value="algebraic_thinking">Algebraic Thinking</option>
+          <option value="geometry_measurement_data">Geometry, Measurement, Data</option>
+        </select>
+      </div>
+
+      <div class="setup-card span-2">
+        <h3>Topics</h3>
+        <div id="filter-topics" class="topic-checkboxes"></div>
+      </div>
+
+      <div class="setup-card">
+        <h3>Question count</h3>
+        <select id="filter-count">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="25">25</option>
+          <option value="50">50 (full test length)</option>
+          <option value="all">All matching</option>
+        </select>
+        <div id="match-count" class="match-count"></div>
+      </div>
+
+    </div>
+
+    <div class="setup-actions">
+      <button id="start-btn" class="primary big">Start Session</button>
+      <button id="full-sim-btn" class="big">Full Praxis Simulation (50 Q · 65 min)</button>
+    </div>
+  </section>
+
+  <!-- ============== TEST SCREEN ============== -->
+  <section id="screen-test" class="screen">
+    <div class="test-header">
+      <div id="progress-text"></div>
+      <div id="timer" class="timer hidden"></div>
+      <button id="mark-review-btn" class="mark-btn">Mark for review</button>
+      <button id="toggle-calc-btn">Calculator</button>
+    </div>
+
+    <div id="question-display" class="question-display"></div>
+
+    <div id="answer-area" class="answer-area"></div>
+
+    <div id="feedback-area" class="feedback-area"></div>
+
+    <div id="solution-area" class="solution-area hidden"></div>
+
+    <div class="test-controls">
+      <button id="hint-btn">Show hint</button>
+      <button id="show-solution-btn">Show solution</button>
+      <div class="spacer"></div>
+      <button id="prev-btn">◀ Previous</button>
+      <button id="next-btn">Next ▶</button>
+      <button id="submit-btn" class="primary">Submit Test</button>
+    </div>
+
+    <div class="nav-grid-wrapper">
+      <h3>Questions</h3>
+      <div id="nav-grid" class="nav-grid"></div>
+      <div class="nav-legend">
+        <span><span class="legend-dot answered"></span>answered</span>
+        <span><span class="legend-dot unanswered"></span>unanswered</span>
+        <span><span class="legend-dot marked"></span>marked</span>
+        <span><span class="legend-dot current"></span>current</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== REVIEW SCREEN ============== -->
+  <section id="screen-review" class="screen">
+    <h2>Results</h2>
+    <div id="score-summary" class="score-summary"></div>
+    <div class="breakdowns">
+      <div id="domain-breakdown"></div>
+      <div id="topic-breakdown"></div>
+    </div>
+    <h3>All questions</h3>
+    <div id="all-questions"></div>
+    <div class="setup-actions">
+      <button id="new-session-btn" class="primary big">New Session</button>
+    </div>
+  </section>
+
+  <!-- ============== HISTORY SCREEN ============== -->
+  <section id="screen-history" class="screen">
+    <h2>Score History</h2>
+    <div id="history-empty" class="hidden">No sessions yet. <a href="#" id="history-back-link">Start one →</a></div>
+    <canvas id="history-chart" width="700" height="240"></canvas>
+    <div id="history-list" class="history-list"></div>
+    <div class="setup-actions">
+      <button id="clear-history-btn">Clear history</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating calculator (rendered by calculator.js) -->
+<div id="calculator-container"></div>
+
+<footer class="footer">
+  <small>Practice tool — not affiliated with ETS. For best calibration, also use the official ETS Praxis 5003 Interactive Practice Test.</small>
+</footer>
+
+<script src="questions.js"></script>
+<script src="calculator.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
