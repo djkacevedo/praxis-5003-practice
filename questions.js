@@ -1527,6 +1527,774 @@ window.QUESTIONS = [
     ],
     "answer_indices": [0, 1],
     "explanation": "The commutative property says order doesn't matter for addition or multiplication: a + b = b + a, a × b = b × a.\nA: commutative addition ✓\nB: commutative multiplication ✓\nC: associative property (regrouping)\nD: identity property of addition (adding 0)"
+  },
+
+  /* ============================================================
+     GEOMETRY, MEASUREMENT & DATA — Shapes (7)
+     ============================================================ */
+  {
+    "id": "gm-sh-001",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which shape has 3 sides?",
+    "choices": ["Square", "Triangle", "Circle", "Rectangle"],
+    "answer_index": 1,
+    "explanation": "A triangle has exactly 3 sides and 3 angles.\n(A square and rectangle have 4 sides; a circle has no straight sides at all.)"
+  },
+  {
+    "id": "gm-sh-002",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "How many sides does a hexagon have?",
+    "choices": ["4", "5", "6", "8"],
+    "answer_index": 2,
+    "explanation": "A hexagon has 6 sides.\n(\"Hex-\" comes from the Greek for six. Pentagon = 5, octagon = 8.)"
+  },
+  {
+    "id": "gm-sh-003",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which shape has 4 right angles AND all sides the same length?",
+    "choices": ["Rectangle", "Square", "Rhombus", "Parallelogram"],
+    "answer_index": 1,
+    "explanation": "A square is the shape with 4 right angles AND 4 equal sides.\nA rectangle has 4 right angles but its sides may not all be equal.\nA rhombus has 4 equal sides but its angles may not be right angles.\nOnly the square satisfies both conditions."
+  },
+  {
+    "id": "gm-sh-004",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A polygon has 5 sides. What is it called?",
+    "choices": ["Quadrilateral", "Pentagon", "Hexagon", "Octagon"],
+    "answer_index": 1,
+    "explanation": "Polygon names are based on side count:\nQuadrilateral = 4, Pentagon = 5, Hexagon = 6, Octagon = 8."
+  },
+  {
+    "id": "gm-sh-005",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which statement about a square is TRUE?",
+    "choices": [
+      "A square is a special kind of rectangle.",
+      "A rectangle is a special kind of square.",
+      "Squares and rectangles are completely separate shapes.",
+      "Only squares have 4 right angles."
+    ],
+    "answer_index": 0,
+    "explanation": "A rectangle is a quadrilateral with 4 right angles. A square has 4 right angles AND 4 equal sides — so a square satisfies the rectangle definition with the extra requirement.\nEvery square is a rectangle, but not every rectangle is a square."
+  },
+  {
+    "id": "gm-sh-006",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student says, \"A rhombus is just a square turned on its side.\" What is wrong with this thinking?",
+    "choices": [
+      "A rhombus has only 3 sides.",
+      "A rhombus and a square have different definitions: a square requires 4 right angles, but a rhombus only requires 4 equal sides. So every square is a rhombus, but most rhombuses are not squares.",
+      "Rotating a shape changes what it is.",
+      "Rhombuses do not exist."
+    ],
+    "answer_index": 1,
+    "explanation": "A rhombus is a quadrilateral with all 4 sides equal — its angles can be any value (as long as opposite angles are equal). A square has 4 equal sides AND 4 right angles.\nSo a square is a special rhombus, but a rhombus with non-right angles is genuinely different from a square — not just rotated. The shape's definition (equal sides + right angles) is what matters, not its visual orientation."
+  },
+  {
+    "id": "gm-sh-007",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "select_all",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which of these are quadrilaterals? Select all that apply.",
+    "choices": ["Square", "Triangle", "Rhombus", "Pentagon"],
+    "answer_indices": [0, 2],
+    "explanation": "A quadrilateral has exactly 4 sides.\nSquare: 4 sides ✓\nTriangle: 3 sides ✗\nRhombus: 4 sides ✓\nPentagon: 5 sides ✗"
+  },
+
+  /* ============================================================
+     GEOMETRY, MEASUREMENT & DATA — Area, Perimeter, Volume (10)
+     ============================================================ */
+  {
+    "id": "gm-ar-001",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is the perimeter of a rectangle that is 5 cm long and 3 cm wide, in cm?",
+    "answer": "16",
+    "explanation": "Perimeter is the distance around a shape: add up all sides.\nP = 5 + 3 + 5 + 3 = 16 cm.\n(Or use the formula P = 2(L + W) = 2(5 + 3) = 16.)"
+  },
+  {
+    "id": "gm-ar-002",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is the area of a rectangle that is 5 cm long and 3 cm wide, in square cm?",
+    "answer": "15",
+    "explanation": "Area of a rectangle = length × width.\nA = 5 × 3 = 15 square cm.\n(Area is measured in square units because it counts unit squares filling the shape.)"
+  },
+  {
+    "id": "gm-ar-003",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A square has a perimeter of 24 inches. What is the length of one side, in inches?",
+    "answer": "6",
+    "explanation": "A square has 4 equal sides.\nSide = perimeter ÷ 4 = 24 ÷ 4 = 6 inches."
+  },
+  {
+    "id": "gm-ar-004",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is the area of a triangle with base 8 and height 5?",
+    "answer": "20",
+    "explanation": "Area of a triangle = (1/2) × base × height.\nA = (1/2) × 8 × 5 = (1/2) × 40 = 20 square units."
+  },
+  {
+    "id": "gm-ar-005",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is the area of a circle with radius 3? Use π in your answer.",
+    "choices": ["6π", "9π", "12π", "9π²"],
+    "answer_index": 1,
+    "explanation": "Area of a circle = π × r².\nA = π × (3)² = π × 9 = 9π.\n(Numerically, using π ≈ 3.14: 9 × 3.14 ≈ 28.26.)"
+  },
+  {
+    "id": "gm-ar-006",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": true,
+    "pedagogical": false,
+    "stem": "What is the volume of a rectangular box that is 4 cm long, 3 cm wide, and 2 cm tall, in cubic cm?",
+    "answer": "24",
+    "explanation": "Volume of a rectangular box = length × width × height.\nV = 4 × 3 × 2 = 24 cubic cm.\n(Volume is measured in cubic units because it counts unit cubes filling the space.)"
+  },
+  {
+    "id": "gm-ar-007",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student is asked for the perimeter of a 6 cm by 4 cm rectangle and answers 24 cm. What is the error?",
+    "choices": [
+      "The student computed the area, not the perimeter. Area = 6 × 4 = 24 cm². Perimeter = 2(6) + 2(4) = 20 cm.",
+      "The student forgot one side; the actual perimeter is 30 cm.",
+      "The answer 24 cm is correct.",
+      "The student should have multiplied 6 × 4 × 2."
+    ],
+    "answer_index": 0,
+    "explanation": "Perimeter is the distance around a shape (linear measurement, units like cm).\nArea is the space inside (square measurement, units like cm²).\nThe student's 24 = 6 × 4 is the AREA in square cm. The perimeter is the sum of all four sides: 6 + 4 + 6 + 4 = 20 cm.\nThis is a very common confusion; pairing units with formulas (cm for perimeter, cm² for area) helps."
+  },
+  {
+    "id": "gm-ar-008",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "numeric_entry",
+    "calculator_allowed": true,
+    "pedagogical": false,
+    "stem": "A garden is 12 feet by 15 feet. If fencing costs $8 per foot, how much does it cost to fence the entire garden, in dollars?",
+    "answer": "432",
+    "explanation": "First find the perimeter: 2(12 + 15) = 2(27) = 54 feet.\nThen multiply by the cost per foot: 54 × $8 = $432."
+  },
+  {
+    "id": "gm-ar-009",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A rectangle has length 10 cm and area 30 square cm. What is its width?",
+    "choices": ["2 cm", "3 cm", "5 cm", "20 cm"],
+    "answer_index": 1,
+    "explanation": "Area = length × width, so width = area ÷ length.\nW = 30 ÷ 10 = 3 cm.\nCheck: 10 × 3 = 30 square cm. ✓"
+  },
+  {
+    "id": "gm-ar-010",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is the perimeter of a square with side 7 cm, in cm?",
+    "answer": "28",
+    "explanation": "A square has 4 equal sides.\nP = 4 × side = 4 × 7 = 28 cm."
+  },
+
+  /* ============================================================
+     GEOMETRY, MEASUREMENT & DATA — Transformations (5)
+     ============================================================ */
+  {
+    "id": "gm-tr-001",
+    "domain": "geometry_measurement_data",
+    "topic": "transformations",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which transformation slides a shape without rotating or flipping it?",
+    "choices": ["Reflection", "Rotation", "Translation", "Dilation"],
+    "answer_index": 2,
+    "explanation": "A translation slides every point of a shape the same distance in the same direction.\nReflection flips across a line. Rotation turns around a point. Dilation resizes."
+  },
+  {
+    "id": "gm-tr-002",
+    "domain": "geometry_measurement_data",
+    "topic": "transformations",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "If a shape is reflected over a vertical line, what happens?",
+    "choices": [
+      "The shape is rotated 90°.",
+      "The shape is flipped horizontally, like in a mirror.",
+      "The shape is moved up.",
+      "The shape is enlarged."
+    ],
+    "answer_index": 1,
+    "explanation": "Reflection over a vertical line flips the shape side-to-side, like a mirror image.\nEach point of the original and its reflection are the same perpendicular distance from the line of reflection."
+  },
+  {
+    "id": "gm-tr-003",
+    "domain": "geometry_measurement_data",
+    "topic": "transformations",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A point P is at (3, 4). It is translated 2 units right and 1 unit down. What are the new coordinates?",
+    "choices": ["(5, 5)", "(5, 3)", "(1, 5)", "(1, 3)"],
+    "answer_index": 1,
+    "explanation": "Right means add to x: 3 + 2 = 5.\nDown means subtract from y: 4 − 1 = 3.\nNew point: (5, 3)."
+  },
+  {
+    "id": "gm-tr-004",
+    "domain": "geometry_measurement_data",
+    "topic": "transformations",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "select_all",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which of these are rigid transformations (preserve size and shape)? Select all that apply.",
+    "choices": ["Translation", "Reflection", "Rotation", "Dilation by a scale factor of 2"],
+    "answer_indices": [0, 1, 2],
+    "explanation": "Rigid transformations preserve both size AND shape — the image is congruent to the original.\nTranslation, reflection, and rotation are all rigid.\nDilation generally changes size (unless the scale factor is 1), so it is NOT rigid. A dilation by 2 doubles the size."
+  },
+  {
+    "id": "gm-tr-005",
+    "domain": "geometry_measurement_data",
+    "topic": "transformations",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student says, \"When you reflect a shape, both its size and its shape can change.\" What is the correct statement?",
+    "choices": [
+      "Reflections preserve both size and shape — only the orientation changes.",
+      "Reflections preserve only size, not shape.",
+      "Reflections change everything about a shape.",
+      "The student is correct."
+    ],
+    "answer_index": 0,
+    "explanation": "Reflection is a rigid transformation: the reflected image is congruent to the original (same size, same shape).\nWhat changes is the orientation — a reflected shape is the mirror image. Compare to a dilation, which DOES change size."
+  },
+
+  /* ============================================================
+     GEOMETRY, MEASUREMENT & DATA — Coordinate Plane (5)
+     ============================================================ */
+  {
+    "id": "gm-cp-001",
+    "domain": "geometry_measurement_data",
+    "topic": "coordinate_plane",
+    "grade_band": "5-6",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What are the coordinates of the origin?",
+    "choices": ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"],
+    "answer_index": 0,
+    "explanation": "The origin is the point where the x-axis and y-axis cross. Both coordinates are 0 there: (0, 0)."
+  },
+  {
+    "id": "gm-cp-002",
+    "domain": "geometry_measurement_data",
+    "topic": "coordinate_plane",
+    "grade_band": "5-6",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which point is in Quadrant II (upper-left of the coordinate plane)?",
+    "choices": ["(3, 2)", "(−3, 2)", "(−3, −2)", "(3, −2)"],
+    "answer_index": 1,
+    "explanation": "Quadrant II has negative x and positive y.\n(−3, 2) has x = −3 (negative) and y = 2 (positive), so it is in Quadrant II.\n(3, 2): Q I (+, +). (−3, −2): Q III (−, −). (3, −2): Q IV (+, −)."
+  },
+  {
+    "id": "gm-cp-003",
+    "domain": "geometry_measurement_data",
+    "topic": "coordinate_plane",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is the distance between (2, 3) and (2, 8)?",
+    "answer": "5",
+    "explanation": "When two points share an x-coordinate, the segment between them is vertical, and its length is the difference of the y-coordinates:\n|8 − 3| = 5 units."
+  },
+  {
+    "id": "gm-cp-004",
+    "domain": "geometry_measurement_data",
+    "topic": "coordinate_plane",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A point has a negative x-coordinate and a positive y-coordinate. In which quadrant does it lie?",
+    "choices": ["Quadrant I (upper-right)", "Quadrant II (upper-left)", "Quadrant III (lower-left)", "Quadrant IV (lower-right)"],
+    "answer_index": 1,
+    "explanation": "Quadrants are numbered counter-clockwise starting from upper-right:\nI: (+, +); II: (−, +); III: (−, −); IV: (+, −).\nNegative x and positive y is Quadrant II."
+  },
+  {
+    "id": "gm-cp-005",
+    "domain": "geometry_measurement_data",
+    "topic": "coordinate_plane",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student plots (5, 2) by going up 5 first, then over 2. What is the misconception?",
+    "choices": [
+      "An ordered pair (x, y) means horizontal first (right/left along the x-axis), then vertical (up/down along the y-axis). The student plotted (2, 5).",
+      "The student's plot is correct.",
+      "Coordinates can be plotted in any order.",
+      "The point lies below the x-axis."
+    ],
+    "answer_index": 0,
+    "explanation": "An ordered pair (x, y) is read as (horizontal, vertical) — x first (right/left), then y (up/down).\nFor (5, 2): go RIGHT 5 along the x-axis, then UP 2 along the y-axis.\nThe student went UP 5 then RIGHT 2, which actually plots (2, 5).\nMnemonic: \"x comes before y in the alphabet; horizontal before vertical.\""
+  },
+
+  /* ============================================================
+     GEOMETRY, MEASUREMENT & DATA — Unit Conversion (6)
+     ============================================================ */
+  {
+    "id": "gm-uc-001",
+    "domain": "geometry_measurement_data",
+    "topic": "unit_conversion",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "How many inches are in 2 feet? (1 foot = 12 inches.)",
+    "answer": "24",
+    "explanation": "1 foot = 12 inches.\n2 feet = 2 × 12 = 24 inches."
+  },
+  {
+    "id": "gm-uc-002",
+    "domain": "geometry_measurement_data",
+    "topic": "unit_conversion",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "How many minutes are in 3 hours?",
+    "answer": "180",
+    "explanation": "1 hour = 60 minutes.\n3 hours = 3 × 60 = 180 minutes."
+  },
+  {
+    "id": "gm-uc-003",
+    "domain": "geometry_measurement_data",
+    "topic": "unit_conversion",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "How many centimeters are in 4 meters?",
+    "answer": "400",
+    "explanation": "1 meter = 100 centimeters.\n4 meters = 4 × 100 = 400 cm."
+  },
+  {
+    "id": "gm-uc-004",
+    "domain": "geometry_measurement_data",
+    "topic": "unit_conversion",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "select_all",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which pairs of measurements are equal? Select all that apply.",
+    "choices": [
+      "1 kilometer = 1,000 meters",
+      "1 hour = 60 minutes",
+      "1 foot = 10 inches",
+      "1 quart = 4 cups"
+    ],
+    "answer_indices": [0, 1, 3],
+    "explanation": "1 kilometer = 1,000 meters ✓ (kilo- means thousand)\n1 hour = 60 minutes ✓\n1 foot = 12 inches (NOT 10) ✗\n1 quart = 4 cups ✓"
+  },
+  {
+    "id": "gm-uc-005",
+    "domain": "geometry_measurement_data",
+    "topic": "unit_conversion",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": true,
+    "pedagogical": false,
+    "stem": "A recipe calls for 2 quarts of milk. How many cups is that? (1 quart = 4 cups.)",
+    "answer": "8",
+    "explanation": "1 quart = 4 cups.\n2 quarts = 2 × 4 = 8 cups."
+  },
+  {
+    "id": "gm-uc-006",
+    "domain": "geometry_measurement_data",
+    "topic": "unit_conversion",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student converts 5 feet to inches and gets 5/12 inches because \"inches are smaller than feet, so I divided.\" What is the misconception?",
+    "choices": [
+      "When converting from a larger unit to a smaller unit, you multiply (not divide). 5 ft × 12 in/ft = 60 inches.",
+      "The student is correct; converting always involves division.",
+      "The conversion rate should be 1 foot = 10 inches.",
+      "5/12 inches is the same as 60 inches."
+    ],
+    "answer_index": 0,
+    "explanation": "When converting from a LARGER unit to a SMALLER unit, the number gets larger (more of the small units fit into the same length), so you MULTIPLY by the conversion rate.\n5 ft × (12 in / 1 ft) = 60 in. Notice the unit \"ft\" cancels, leaving inches.\nThe student confused \"smaller unit\" with \"smaller number.\""
+  },
+
+  /* ============================================================
+     GEOMETRY, MEASUREMENT & DATA — Data Displays (6)
+     ============================================================ */
+  {
+    "id": "gm-dd-001",
+    "domain": "geometry_measurement_data",
+    "topic": "data_displays",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A bar graph shows the number of books read by 4 students:\n  Ana: 5\n  Ben: 8\n  Carla: 3\n  David: 6\nWho read the most books?",
+    "choices": ["Ana", "Ben", "Carla", "David"],
+    "answer_index": 1,
+    "explanation": "Compare the counts: Ana 5, Ben 8, Carla 3, David 6.\nThe largest is 8, which is Ben."
+  },
+  {
+    "id": "gm-dd-002",
+    "domain": "geometry_measurement_data",
+    "topic": "data_displays",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A bar graph shows daily rainfall:\n  Monday: 1 inch\n  Tuesday: 3 inches\n  Wednesday: 2 inches\n  Thursday: 0 inches\nWhat was the total rainfall over the four days, in inches?",
+    "answer": "6",
+    "explanation": "Add the values: 1 + 3 + 2 + 0 = 6 inches."
+  },
+  {
+    "id": "gm-dd-003",
+    "domain": "geometry_measurement_data",
+    "topic": "data_displays",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which graph type is BEST for showing how a single quantity changes over time?",
+    "choices": ["Bar graph", "Line graph", "Pie chart", "Pictograph"],
+    "answer_index": 1,
+    "explanation": "Line graphs are designed to show change over a continuous variable, especially time. Each point is connected to the next, making trends easy to see.\nBar graphs compare categories. Pie charts show parts of a whole at a single moment."
+  },
+  {
+    "id": "gm-dd-004",
+    "domain": "geometry_measurement_data",
+    "topic": "data_displays",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A pie chart shows that 25% of 80 students chose math as their favorite subject. How many students chose math?",
+    "choices": ["10", "20", "25", "40"],
+    "answer_index": 1,
+    "explanation": "25% of 80 = 0.25 × 80 = 20.\n(Or: 25% = 1/4, and 80 ÷ 4 = 20.)"
+  },
+  {
+    "id": "gm-dd-005",
+    "domain": "geometry_measurement_data",
+    "topic": "data_displays",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which type of graph is BEST for comparing the number of pets owned by students in different grades?",
+    "choices": ["Line graph", "Bar graph", "Pie chart", "Coordinate grid"],
+    "answer_index": 1,
+    "explanation": "Bar graphs are designed for comparing values across discrete categories — here, different grade levels.\nLine graphs are for continuous change (e.g., over time). Pie charts show parts of a whole. A coordinate grid plots ordered pairs, not category counts."
+  },
+  {
+    "id": "gm-dd-006",
+    "domain": "geometry_measurement_data",
+    "topic": "data_displays",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student looks at a bar graph of weekly rainfall over 4 weeks and concludes \"every week had the same amount of rain\" because the bars all look about the same height. What is the issue?",
+    "choices": [
+      "Bars of similar height suggest similar values, but to claim \"the same\" the student should check the exact numbers from the y-axis or data table.",
+      "Bar graphs cannot be used for rainfall data.",
+      "The student should multiply the bar heights together.",
+      "The student's reasoning is correct."
+    ],
+    "answer_index": 0,
+    "explanation": "Visual eyeballing is fine for rough comparisons, but \"same\" is a precise claim that requires the actual values. A small difference in bar height can represent a meaningful difference in the underlying number — read the axis or data table when precision matters."
+  },
+
+  /* ============================================================
+     GEOMETRY, MEASUREMENT & DATA — Mean, Median, Mode, Range (6)
+     ============================================================ */
+  {
+    "id": "gm-ct-001",
+    "domain": "geometry_measurement_data",
+    "topic": "central_tendency",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Find the mean of these test scores: 80, 85, 90, 95, 100",
+    "answer": "90",
+    "explanation": "Mean (average) = sum of values ÷ count.\nSum = 80 + 85 + 90 + 95 + 100 = 450. Count = 5.\nMean = 450 ÷ 5 = 90."
+  },
+  {
+    "id": "gm-ct-002",
+    "domain": "geometry_measurement_data",
+    "topic": "central_tendency",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Find the median of: 3, 7, 2, 8, 5",
+    "answer": "5",
+    "explanation": "First sort: 2, 3, 5, 7, 8.\nThe median is the middle value of the sorted list. With 5 values, the middle is the 3rd: 5."
+  },
+  {
+    "id": "gm-ct-003",
+    "domain": "geometry_measurement_data",
+    "topic": "central_tendency",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is the mode of: 4, 6, 4, 8, 4, 6, 9?",
+    "answer": "4",
+    "explanation": "The mode is the value that appears most often.\n4 appears 3 times; 6 appears 2 times; 8 and 9 each appear once.\nMode = 4."
+  },
+  {
+    "id": "gm-ct-004",
+    "domain": "geometry_measurement_data",
+    "topic": "central_tendency",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is the range of these scores: 65, 78, 82, 91, 88?",
+    "answer": "26",
+    "explanation": "Range = greatest value − least value.\nGreatest = 91. Least = 65.\nRange = 91 − 65 = 26."
+  },
+  {
+    "id": "gm-ct-005",
+    "domain": "geometry_measurement_data",
+    "topic": "central_tendency",
+    "grade_band": "5-6",
+    "difficulty": "hard",
+    "format": "numeric_entry",
+    "calculator_allowed": true,
+    "pedagogical": false,
+    "stem": "Five students earned scores of 70, 75, 80, 85, and 90 on a test. A sixth student then takes the test, and the new average of all 6 scores is 82. What was the sixth student's score?",
+    "answer": "92",
+    "explanation": "Sum of the original 5 scores: 70 + 75 + 80 + 85 + 90 = 400.\nNew average = 82 with 6 students, so new total = 82 × 6 = 492.\nSixth score = 492 − 400 = 92."
+  },
+  {
+    "id": "gm-ct-006",
+    "domain": "geometry_measurement_data",
+    "topic": "central_tendency",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student is asked for the median of {8, 3, 1, 7, 5} and answers 1, because \"1 is the middle value in the list as written.\" What is the misconception?",
+    "choices": [
+      "The student should multiply the values together first.",
+      "The median is the middle value of the SORTED list, not the middle position of the list as written.",
+      "The median is 8, not 1.",
+      "Medians cannot be computed for sets with 5 values."
+    ],
+    "answer_index": 1,
+    "explanation": "To find the median, first sort the values from smallest to largest: 1, 3, 5, 7, 8.\nWith 5 values, the median is the 3rd (middle) one: 5.\nThe student took the 3rd element of the unsorted list (which happened to be 1) — that's not the median. Always sort first."
+  },
+
+  /* ============================================================
+     GEOMETRY, MEASUREMENT & DATA — Probability (5)
+     ============================================================ */
+  {
+    "id": "gm-pr-001",
+    "domain": "geometry_measurement_data",
+    "topic": "probability",
+    "grade_band": "3-4",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A bag has 3 red marbles and 2 blue marbles. If you reach in without looking and pick one marble, what is the probability of picking a red one?",
+    "choices": ["3/5", "2/5", "3/2", "2/3"],
+    "answer_index": 0,
+    "explanation": "Probability = favorable outcomes ÷ total outcomes.\nFavorable (red marbles) = 3. Total marbles = 3 + 2 = 5.\nP(red) = 3/5."
+  },
+  {
+    "id": "gm-pr-002",
+    "domain": "geometry_measurement_data",
+    "topic": "probability",
+    "grade_band": "5-6",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "If you flip a fair coin once, what is the probability of getting heads?",
+    "choices": ["0", "1/4", "1/2", "1"],
+    "answer_index": 2,
+    "explanation": "A fair coin has 2 equally likely outcomes (heads, tails).\nP(heads) = 1 favorable / 2 total = 1/2."
+  },
+  {
+    "id": "gm-pr-003",
+    "domain": "geometry_measurement_data",
+    "topic": "probability",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A spinner has 8 equal sections numbered 1 through 8. What is the probability of spinning an even number? Express as a decimal.",
+    "answer": "0.5",
+    "explanation": "Even numbers from 1 to 8: 2, 4, 6, 8 — that's 4 favorable.\nTotal sections = 8.\nP(even) = 4/8 = 1/2 = 0.5."
+  },
+  {
+    "id": "gm-pr-004",
+    "domain": "geometry_measurement_data",
+    "topic": "probability",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "select_all",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which of these events have probability 1/6 when rolling a fair 6-sided die? Select all that apply.",
+    "choices": ["Rolling a 3", "Rolling an even number", "Rolling a 1", "Rolling a number greater than 4"],
+    "answer_indices": [0, 2],
+    "explanation": "On a fair 6-sided die, each individual face has probability 1/6.\nRolling a 3: 1/6 ✓\nRolling an even number (2, 4, or 6): 3/6 = 1/2 ✗\nRolling a 1: 1/6 ✓\nRolling > 4 (5 or 6): 2/6 = 1/3 ✗"
+  },
+  {
+    "id": "gm-pr-005",
+    "domain": "geometry_measurement_data",
+    "topic": "probability",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student says, \"I just flipped 5 heads in a row, so the next flip is more likely to be tails.\" What is the misconception?",
+    "choices": [
+      "Each coin flip is independent — the next flip is still 1/2 heads, 1/2 tails. This belief is the \"gambler's fallacy.\"",
+      "The student is correct; flipping changes the coin's properties.",
+      "The next flip is even more likely to be heads.",
+      "Probability cannot be computed for coins."
+    ],
+    "answer_index": 0,
+    "explanation": "Coin flips are independent events: each flip has its own 1/2 probability of heads regardless of past outcomes.\nBelieving that past results affect future independent trials is the \"gambler's fallacy.\"\n(Past outcomes DO matter for dependent events, like drawing cards without replacement — but a coin's behavior doesn't change between flips.)"
   }
 
 ];
