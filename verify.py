@@ -417,6 +417,35 @@ REFS = {
                   "median stays 90 after adding 95"),
     "gm-pr-006": ("mc_text", "1/15",
                   "P(lilies)·P(pink) = 1/5 × 1/3 = 1/15"),
+
+    # ============================================================
+    # BATCH 5 — Coverage rebalance (25)
+    # ============================================================
+    "no-pv-011": ("mc_text", "74", "47 vs 74 → 74 greater"),
+    "no-pv-012": ("mc_text", "10 + 4", "14 = 10 + 4"),
+    "no-wn-009": ("ne_value", 10 - 6, "6 + 4 = 10"),
+    "no-wn-010": ("mc_text", "8 + 2 + 3 = 10 + 3", "make-a-ten for 8+5"),
+    "no-fr-013": ("ne_value", 6 // 2, "half of 6"),
+    "al-ps-012": ("mc_text", "△ (triangle)", "alternating pattern"),
+    "al-eq-015": ("mc_text", "2", "5 = 3 + ?"),
+    "gm-sh-009": ("mc_text", "Square", "4 equal sides + 4 right angles"),
+    "gm-sh-010": ("ne_value", 5, "pentagon = 5 sides"),
+    "gm-uc-007": ("ne_value", 4 - 3, "pencil − crayon"),
+    "no-wn-011": ("ne_value", 47 * 23, "1081"),
+    "no-wn-012": ("ne_value", 1800, "1847 → 1800 (tens=4 < 5)"),
+    "no-dc-009": ("mc_text", "0.45", "max of 0.4, 0.04, 0.45, 0.044"),
+    "no-fr-014": ("ne_value", 24 // 3, "1/3 of 24"),
+    "al-fn-011": ("mc_text", "16", "9 + 7 = 16"),
+    "gm-uc-008": ("ne_value", 105, "2:15 PM to 4:00 PM = 1h 45m"),
+    "no-fr-015": ("skip", None, "pedagogical: 1/4 vs 1/3 misconception"),
+    "no-wn-013": ("skip", None, "pedagogical: 200 − 47 column error"),
+    "no-dc-010": ("skip", None, "pedagogical: 0.5 + 0.5 = 0.10 misconception"),
+    "no-pf-006": ("skip", None, "pedagogical: 0 as a multiple"),
+    "al-eq-016": ("skip", None, "pedagogical: sign error in moving terms"),
+    "al-ex-013": ("skip", None, "pedagogical: 5 + 2x grouping error"),
+    "al-ps-013": ("skip", None, "pedagogical: rule from too few terms"),
+    "gm-ct-008": ("skip", None, "pedagogical: outlier mean vs median"),
+    "gm-ar-013": ("skip", None, "pedagogical: circumference vs area"),
 }
 
 

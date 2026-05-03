@@ -2724,6 +2724,422 @@ window.QUESTIONS = [
     "choices": ["1/8", "1/15", "2/15", "1/5"],
     "answer_index": 1,
     "explanation": "When two events are independent, the probability of BOTH occurring is the product of the individual probabilities.\nP(lilies) = 1/5 (one of five flower kinds).\nP(pink vase) = 1/3 (one of three colors).\nP(lilies AND pink) = (1/5) × (1/3) = 1/15."
+  },
+
+  /* ============================================================
+     BATCH 5 — Coverage rebalance (25)
+     +10 K-2 (more lower-grade content), +6 grade 3-4,
+     +9 grade 5-6 pedagogical (more misconception-style items).
+     ============================================================ */
+
+  /* --- K-2 Numbers & Operations (5) --- */
+  {
+    "id": "no-pv-011",
+    "domain": "numbers_operations",
+    "topic": "place_value",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which number is greater, 47 or 74?",
+    "choices": ["47", "74", "They are equal", "Cannot tell"],
+    "answer_index": 1,
+    "explanation": "Compare the digits left to right (highest place value first).\nTens place: 4 vs 7. Since 7 > 4, the number 74 is greater than 47.\n(The digits are the same, but their positions matter — that's place value.)"
+  },
+  {
+    "id": "no-pv-012",
+    "domain": "numbers_operations",
+    "topic": "place_value",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which expression is another way to write 14?",
+    "choices": ["10 + 4", "1 + 4", "1 ten + 14 ones", "4 tens + 1 one"],
+    "answer_index": 0,
+    "explanation": "14 has 1 ten and 4 ones, which equals 10 + 4.\n1 + 4 = 5, not 14.\n\"1 ten + 14 ones\" = 10 + 14 = 24, not 14.\n\"4 tens + 1 one\" = 40 + 1 = 41, not 14."
+  },
+  {
+    "id": "no-wn-009",
+    "domain": "numbers_operations",
+    "topic": "whole_number_ops",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What number makes this true?\n6 + ___ = 10",
+    "answer": "4",
+    "explanation": "Think: \"6 plus what equals 10?\"\n10 − 6 = 4.\n(The make-a-ten strategy: counting up from 6 to 10 takes 4 steps.)"
+  },
+  {
+    "id": "no-wn-010",
+    "domain": "numbers_operations",
+    "topic": "whole_number_ops",
+    "grade_band": "K-2",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which expression shows how to find 8 + 5 using the \"make a ten\" strategy?",
+    "choices": [
+      "8 + 2 + 3 = 10 + 3",
+      "5 + 5 + 3 = 13",
+      "8 + 8 = 16",
+      "10 + 10 = 20"
+    ],
+    "answer_index": 0,
+    "explanation": "\"Make a ten\" with the 8 by taking 2 from the 5: 8 + 2 = 10. The 5 has 3 left over after giving away 2, so add the 3: 10 + 3 = 13.\nWritten as a single expression: 8 + 5 = 8 + 2 + 3 = 10 + 3 = 13."
+  },
+  {
+    "id": "no-fr-013",
+    "domain": "numbers_operations",
+    "topic": "fractions",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "There are 6 cookies on a plate. Anna takes half of them. How many cookies does Anna take?",
+    "answer": "3",
+    "explanation": "\"Half\" means split into 2 equal groups: 6 ÷ 2 = 3.\nAnna takes 3 cookies."
+  },
+
+  /* --- K-2 Algebraic Thinking (2) --- */
+  {
+    "id": "al-ps-012",
+    "domain": "algebraic_thinking",
+    "topic": "patterns_sequences",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What shape comes next in the pattern?\n△ ○ △ ○ △ ○ ___",
+    "choices": ["△ (triangle)", "○ (circle)", "□ (square)", "Cannot tell"],
+    "answer_index": 0,
+    "explanation": "The pattern alternates: triangle, circle, triangle, circle, …\nAfter ○ (circle), the next shape is △ (triangle)."
+  },
+  {
+    "id": "al-eq-015",
+    "domain": "algebraic_thinking",
+    "topic": "equations_inequalities",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A scale is balanced. The left side shows 5. The right side shows 3 + ___. What number makes the scale balance?",
+    "choices": ["1", "2", "3", "8"],
+    "answer_index": 1,
+    "explanation": "For the scale to balance, both sides must equal the same number.\n5 = 3 + ?\n? = 5 − 3 = 2."
+  },
+
+  /* --- K-2 Geometry/Measurement/Data (3) --- */
+  {
+    "id": "gm-sh-009",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which shape has 4 sides that are all the same length AND 4 right angles?",
+    "choices": ["Triangle", "Square", "Circle", "Rectangle"],
+    "answer_index": 1,
+    "explanation": "A square has 4 equal sides AND 4 right angles.\nA rectangle has 4 right angles but its sides aren't all equal in general.\nA triangle has 3 sides. A circle has no straight sides at all."
+  },
+  {
+    "id": "gm-sh-010",
+    "domain": "geometry_measurement_data",
+    "topic": "shapes",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "How many sides does a pentagon have?",
+    "answer": "5",
+    "explanation": "\"Penta-\" means five.\nA pentagon has 5 sides (and 5 corners)."
+  },
+  {
+    "id": "gm-uc-007",
+    "domain": "geometry_measurement_data",
+    "topic": "unit_conversion",
+    "grade_band": "K-2",
+    "difficulty": "easy",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A pencil is 4 inches long. A crayon is 3 inches long. How many inches longer is the pencil than the crayon?",
+    "answer": "1",
+    "explanation": "Subtract the crayon's length from the pencil's length:\n4 − 3 = 1 inch."
+  },
+
+  /* --- Grade 3-4 Numbers & Operations (4) --- */
+  {
+    "id": "no-wn-011",
+    "domain": "numbers_operations",
+    "topic": "whole_number_ops",
+    "grade_band": "3-4",
+    "difficulty": "hard",
+    "format": "numeric_entry",
+    "calculator_allowed": true,
+    "pedagogical": false,
+    "stem": "What is 47 × 23?",
+    "answer": "1081",
+    "explanation": "Use partial products:\n47 × 20 = 940\n47 × 3 = 141\nAdd: 940 + 141 = 1,081.\n(Or standard algorithm: 47 × 3 = 141, write below; 47 × 20 = 940, write below shifted; sum = 1,081.)"
+  },
+  {
+    "id": "no-wn-012",
+    "domain": "numbers_operations",
+    "topic": "whole_number_ops",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Round 1,847 to the nearest hundred.",
+    "answer": "1800",
+    "explanation": "To round to the nearest hundred, look at the tens digit.\n1,847: tens digit is 4. Since 4 < 5, round DOWN.\nNearest hundred: 1,800."
+  },
+  {
+    "id": "no-dc-009",
+    "domain": "numbers_operations",
+    "topic": "decimals",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "Which decimal is the greatest?",
+    "choices": ["0.4", "0.04", "0.45", "0.044"],
+    "answer_index": 2,
+    "explanation": "Write each with the same number of decimal places (pad with zeros):\n0.4 = 0.400\n0.04 = 0.040\n0.45 = 0.450\n0.044 = 0.044\nThe largest is 0.450, so 0.45 is greatest."
+  },
+  {
+    "id": "no-fr-014",
+    "domain": "numbers_operations",
+    "topic": "fractions",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "What is 1/3 of 24?",
+    "answer": "8",
+    "explanation": "\"1/3 of 24\" means split 24 into 3 equal groups and take one group.\n24 ÷ 3 = 8."
+  },
+
+  /* --- Grade 3-4 Algebraic Thinking (1) --- */
+  {
+    "id": "al-fn-011",
+    "domain": "algebraic_thinking",
+    "topic": "functions",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "An input-output box adds 7 to each input. What is the output when the input is 9?",
+    "choices": ["2", "16", "63", "9"],
+    "answer_index": 1,
+    "explanation": "Apply the rule \"add 7\" to the input 9:\n9 + 7 = 16."
+  },
+
+  /* --- Grade 3-4 Geometry/Measurement/Data (1) --- */
+  {
+    "id": "gm-uc-008",
+    "domain": "geometry_measurement_data",
+    "topic": "unit_conversion",
+    "grade_band": "3-4",
+    "difficulty": "medium",
+    "format": "numeric_entry",
+    "calculator_allowed": false,
+    "pedagogical": false,
+    "stem": "A movie starts at 2:15 PM and ends at 4:00 PM. How many minutes long is the movie?",
+    "answer": "105",
+    "explanation": "From 2:15 PM to 4:00 PM:\n2:15 PM to 3:15 PM is 60 minutes.\n3:15 PM to 4:00 PM is 45 minutes.\nTotal: 60 + 45 = 105 minutes.\n(Or: 1 hour 45 minutes = 60 + 45 = 105 minutes.)"
+  },
+
+  /* --- Grade 5-6 Pedagogical: Numbers & Operations (4) --- */
+  {
+    "id": "no-fr-015",
+    "domain": "numbers_operations",
+    "topic": "fractions",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student says 1/4 is greater than 1/3 because 4 is greater than 3. What is the misconception?",
+    "choices": [
+      "The student is correct.",
+      "When two fractions have the same numerator, the one with the larger denominator is the SMALLER fraction (the whole is split into more, smaller pieces).",
+      "1/4 and 1/3 are equal.",
+      "Fractions cannot be compared without finding a common denominator first."
+    ],
+    "answer_index": 1,
+    "explanation": "With a fixed numerator (1), a larger denominator means each piece is smaller.\n1/3 is one of three equal pieces of a whole; 1/4 is one of four equal pieces — the four pieces are smaller.\nSo 1/3 > 1/4, not the other way around.\nA pizza analogy makes this concrete: 1 slice from a pizza cut into 3 is bigger than 1 slice from a pizza cut into 4."
+  },
+  {
+    "id": "no-wn-013",
+    "domain": "numbers_operations",
+    "topic": "whole_number_ops",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student computes 200 − 47 and writes 247. What error did the student likely make?",
+    "choices": [
+      "The student multiplied 200 × 47 incorrectly.",
+      "The student subtracted the smaller digit from the larger digit in each column instead of borrowing across the zeros.",
+      "The student should have gotten 263.",
+      "The answer 247 is correct."
+    ],
+    "answer_index": 1,
+    "explanation": "The correct answer is 200 − 47 = 153.\nThe student got 247 by treating each column as \"larger minus smaller\" instead of borrowing: ones 7 − 0 = 7; tens 4 − 0 = 4; hundreds 2 (untouched) → 247.\n(Note: in this particular case, that mistake produces the same result as 200 + 47.)\nThe correct method is to borrow across the zeros: 200 → 1 hundred + 9 tens + 10 ones, then subtract."
+  },
+  {
+    "id": "no-dc-010",
+    "domain": "numbers_operations",
+    "topic": "decimals",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student computes 0.5 + 0.5 and writes 0.10. What is the misconception?",
+    "choices": [
+      "The student treated the digits after the decimal as a whole number, writing 5 + 5 = 10 with the decimal still in front. The correct sum is 1.0.",
+      "0.10 is correct because 0.5 + 0.5 = 0.10.",
+      "The sum should be 0.55.",
+      "Decimals cannot be added directly."
+    ],
+    "answer_index": 0,
+    "explanation": "0.5 + 0.5 = 1.0 (one whole — five tenths plus five tenths makes ten tenths, which is one).\nThe student added 5 + 5 = 10 and wrote 0.10, treating the decimals as if the part after the decimal was a separate whole number. But 0.10 means 10 hundredths = 1/10, not 1.\nA fix: line up the decimal points and add columns. Or note that 5 tenths + 5 tenths = 10 tenths = 1 whole."
+  },
+  {
+    "id": "no-pf-006",
+    "domain": "numbers_operations",
+    "topic": "prime_factorization_number_theory",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student is asked, \"Is 0 a multiple of 6?\" and answers \"No, because 6 doesn't fit into 0.\" What is correct?",
+    "choices": [
+      "The student is correct.",
+      "Yes — 0 is a multiple of every integer because 6 × 0 = 0.",
+      "0 is a multiple of 1 only.",
+      "Multiples are not defined for 0."
+    ],
+    "answer_index": 1,
+    "explanation": "A multiple of 6 is any number that can be written as 6 × k for some integer k.\nWith k = 0: 6 × 0 = 0, so 0 IS a multiple of 6 (and a multiple of every nonzero integer).\nThe student's reasoning (\"6 doesn't fit into 0\") confuses multiples with the everyday idea of \"groups\" — but mathematically, zero groups of 6 IS a valid multiple."
+  },
+
+  /* --- Grade 5-6 Pedagogical: Algebraic Thinking (3) --- */
+  {
+    "id": "al-eq-016",
+    "domain": "algebraic_thinking",
+    "topic": "equations_inequalities",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student solves 3x + 2 = 11 with this work:\n3x + 2 = 11\n3x = 11 + 2\n3x = 13\nx = 13/3\n\nWhat is the error?",
+    "choices": [
+      "The student added 2 to both sides instead of subtracting it. The correct first step is 3x = 11 − 2 = 9, then x = 3.",
+      "The student should have multiplied both sides by 2.",
+      "The answer 13/3 is correct.",
+      "Equations cannot have fractional solutions."
+    ],
+    "answer_index": 0,
+    "explanation": "To isolate 3x, you SUBTRACT 2 from both sides — moving +2 to the right side flips its sign to −2.\nCorrect: 3x = 11 − 2 = 9, so x = 9 ÷ 3 = 3.\nCheck: 3(3) + 2 = 9 + 2 = 11 ✓.\nThe student made a sign error when moving the +2 across the equals sign."
+  },
+  {
+    "id": "al-ex-013",
+    "domain": "algebraic_thinking",
+    "topic": "expressions",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student is asked to evaluate 5 + 2x for x = 3 and writes (5 + 2)(3) = 21. What is the error?",
+    "choices": [
+      "The student grouped 5 + 2 first instead of multiplying 2 by x first. By order of operations, 5 + 2x = 5 + (2 · x). For x = 3: 5 + 2(3) = 5 + 6 = 11.",
+      "The answer 21 is correct.",
+      "The student should have used x = 5 instead.",
+      "5 + 2x cannot be evaluated."
+    ],
+    "answer_index": 0,
+    "explanation": "Order of operations: multiplication before addition.\n5 + 2x means 5 + (2 · x), not (5 + 2) · x.\nFor x = 3: 5 + 2(3) = 5 + 6 = 11.\nThe student's 21 = (5 + 2)(3) = 7 · 3 implicitly added invisible parentheses around the 5 + 2."
+  },
+  {
+    "id": "al-ps-013",
+    "domain": "algebraic_thinking",
+    "topic": "patterns_sequences",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student sees the start of a sequence — 2, 4, 6 — and confidently writes the rule \"add 2.\" What is the issue with concluding the rule from these three terms alone?",
+    "choices": [
+      "The rule is certain.",
+      "Three terms is not enough to uniquely determine a rule. 2, 4, 6 fits \"add 2,\" but it also fits \"the next even number\" or many other rules. More terms or a stated context are needed.",
+      "The student should have written \"add 1.\"",
+      "Sequences cannot have rules."
+    ],
+    "answer_index": 1,
+    "explanation": "Many different rules can produce the prefix 2, 4, 6 — \"add 2\" gives 8 next, but a different rule might give 10 or 12. From the first three terms alone, the rule is under-determined.\nBest practice: confirm a rule with more terms, or use a stated context (e.g., \"these are even numbers in order\") to pick the intended rule.\nThis matters in teaching: students often jump to \"add 2\" without checking, then are surprised when later terms break the pattern."
+  },
+
+  /* --- Grade 5-6 Pedagogical: Geometry/Measurement/Data (2) --- */
+  {
+    "id": "gm-ct-008",
+    "domain": "geometry_measurement_data",
+    "topic": "central_tendency",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A class's quiz scores are 70, 75, 80, 80, 100. A student says the **mean** is the best measure of the typical score. What is a problem with that?",
+    "choices": [
+      "The mean (81) is pulled up by the outlier 100, making it higher than most students actually scored. The median (80) better represents the typical score here.",
+      "The mean is always best.",
+      "The mode is always best.",
+      "There is no typical score for this data."
+    ],
+    "answer_index": 0,
+    "explanation": "Mean = (70 + 75 + 80 + 80 + 100) / 5 = 405 / 5 = 81.\nMedian = 80 (middle value of sorted list).\nThe outlier 100 pulls the mean up above where most data points actually sit (70-80). The median is unaffected by outliers, so it stays close to the cluster of values.\nWhen data has outliers or is skewed, the median is often a better summary of \"typical.\""
+  },
+  {
+    "id": "gm-ar-013",
+    "domain": "geometry_measurement_data",
+    "topic": "area_perimeter_volume",
+    "grade_band": "5-6",
+    "difficulty": "medium",
+    "format": "multiple_choice",
+    "calculator_allowed": false,
+    "pedagogical": true,
+    "stem": "A student is asked for the area of a circle with radius 4 and writes 8π. What is the misconception?",
+    "choices": [
+      "The student used the CIRCUMFERENCE formula (2πr) instead of the AREA formula (πr²). Area = π(4)² = 16π.",
+      "8π is correct.",
+      "The student forgot to square π.",
+      "Circles do not have area."
+    ],
+    "answer_index": 0,
+    "explanation": "Two circle formulas to keep separate:\n  Circumference (the distance AROUND) = 2πr — a length.\n  Area (the space INSIDE) = π · r² — a square measurement.\nFor r = 4: Circumference = 2π(4) = 8π linear units. Area = π · 4² = 16π square units.\nThe student computed circumference and called it area. A useful check: area should be in SQUARE units (here, square inches/cm/etc.); if your answer doesn't have square units, you likely computed something else."
   }
 
 ];

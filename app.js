@@ -9,6 +9,9 @@
   // Constants
   // ============================================================
   const STORAGE_KEY = "praxis5003_history_v1";
+  const SESSION_KEY = "praxis5003_session_v1";
+  const THEME_KEY = "praxis5003_theme";
+  const SESSION_VERSION = 1;
   const SECONDS_PER_QUESTION = 78; // real test: 50q / 65min ≈ 78 sec/q
 
   const DOMAIN_NAMES = {
@@ -227,6 +230,7 @@
 
     switchScreen("test");
     if (timeLimit) startTimer(timeLimit);
+    saveActiveSession();
     renderTestScreen();
   }
 
@@ -591,6 +595,7 @@
       cell.textContent = i + 1;
       cell.addEventListener("click", () => {
         s.currentIndex = i;
+        saveActiveSession();
         renderTestScreen();
       });
       grid.appendChild(cell);
@@ -603,6 +608,7 @@
     if (s.mode === "practice") {
       s.revealed[questionId] = true; // auto-show solution after practice answer
     }
+    saveActiveSession();
     renderTestScreen();
   }
 
@@ -610,12 +616,14 @@
     $("#prev-btn").addEventListener("click", () => {
       if (State.session.currentIndex > 0) {
         State.session.currentIndex--;
+        saveActiveSession();
         renderTestScreen();
       }
     });
     $("#next-btn").addEventListener("click", () => {
       if (State.session.currentIndex < State.session.questions.length - 1) {
         State.session.currentIndex++;
+        saveActiveSession();
         renderTestScreen();
       }
     });
@@ -623,14 +631,17 @@
       const q = currentQuestion();
       if (State.session.marked.has(q.id)) State.session.marked.delete(q.id);
       else State.session.marked.add(q.id);
+      saveActiveSession();
       renderTestScreen();
     });
     $("#hint-btn").addEventListener("click", () => {
       State.session.hinted[currentQuestion().id] = true;
+      saveActiveSession();
       renderTestScreen();
     });
     $("#show-solution-btn").addEventListener("click", () => {
       State.session.revealed[currentQuestion().id] = true;
+      saveActiveSession();
       renderTestScreen();
     });
     $("#submit-btn").addEventListener("click", () => {
@@ -654,6 +665,7 @@
     stopTimer();
     window.Calculator.hide();
     saveSessionToHistory();
+    clearActiveSession();
     switchScreen("review");
     renderReview();
     if (opts && opts.auto) {
@@ -747,6 +759,149 @@
     $("#new-session-btn").addEventListener("click", () => {
       State.session = null;
       switchScreen("setup");
+    });
+  }
+
+  // ============================================================
+  // Theme (light/dark) — persisted in localStorage, OS-default fallback
+  // ============================================================
+  function applyTheme(theme) {
+    if (theme === "dark") document.documentElement.dataset.theme = "dark";
+    else document.documentElement.removeAttribute("data-theme");
+    const btn = document.getElementById("theme-toggle");
+    if (btn) btn.textContent = theme === "dark" ? "☀" : "🌗";
+  }
+  function getStoredTheme() {
+    return localStorage.getItem(THEME_KEY); // "dark" | "light" | null
+  }
+  function preferredTheme() {
+    const stored = getStoredTheme();
+    if (stored) return stored;
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+    return "light";
+  }
+  function toggleTheme() {
+    const next = (document.documentElement.dataset.theme === "dark") ? "light" : "dark";
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  }
+
+  // ============================================================
+  // Active session save/continue (localStorage)
+  // ============================================================
+  function saveActiveSession() {
+    const s = State.session;
+    if (!s || s.submitted) return;
+    try {
+      const payload = {
+        v: SESSION_VERSION,
+        config: {
+          mode: s.mode,
+          grade_band: State.config.grade_band,
+          domain: State.config.domain,
+          topics: State.config.topics.slice(),
+        },
+        questions: s.questions,        // already shuffled; keep as-is so order is stable on resume
+        answers: s.answers,
+        revealed: s.revealed,
+        hinted: s.hinted,
+        marked: Array.from(s.marked),
+        currentIndex: s.currentIndex,
+        startTime: s.startTime,
+        timeLimit: s.timeLimit,
+        endAt: s.endAt || null,
+        savedAt: Date.now(),
+      };
+      localStorage.setItem(SESSION_KEY, JSON.stringify(payload));
+    } catch (_) { /* storage full / serialization error: silent */ }
+  }
+  function loadActiveSession() {
+    try {
+      const raw = localStorage.getItem(SESSION_KEY);
+      if (!raw) return null;
+      const data = JSON.parse(raw);
+      if (!data || data.v !== SESSION_VERSION) return null;
+      if (!Array.isArray(data.questions) || data.questions.length === 0) return null;
+      return data;
+    } catch (_) { return null; }
+  }
+  function clearActiveSession() {
+    localStorage.removeItem(SESSION_KEY);
+  }
+  function resumeSession(saved) {
+    State.session = {
+      questions: saved.questions,
+      answers: saved.answers || {},
+      revealed: saved.revealed || {},
+      hinted: saved.hinted || {},
+      marked: new Set(saved.marked || []),
+      currentIndex: saved.currentIndex || 0,
+      startTime: saved.startTime || Date.now(),
+      timeLimit: saved.timeLimit || null,
+      endAt: saved.endAt || null,
+      submitted: false,
+      mode: saved.mode || "practice",
+    };
+    if (saved.config) {
+      State.config.mode = saved.config.mode || State.config.mode;
+      if (saved.config.grade_band) State.config.grade_band = saved.config.grade_band;
+      if (saved.config.domain) State.config.domain = saved.config.domain;
+      if (Array.isArray(saved.config.topics)) State.config.topics = saved.config.topics.slice();
+    }
+    switchScreen("test");
+    if (State.session.endAt) {
+      const remaining = State.session.endAt - Date.now();
+      if (remaining <= 0) {
+        // Time already elapsed while away — auto-submit.
+        renderTestScreen();
+        submitTest({ auto: true });
+        return;
+      }
+      startTimer(remaining);
+    }
+    renderTestScreen();
+  }
+  function renderResumeBanner() {
+    const banner = $("#resume-banner");
+    if (!banner) return;
+    const saved = loadActiveSession();
+    if (!saved) { banner.classList.add("hidden"); banner.innerHTML = ""; return; }
+    const total = saved.questions.length;
+    const idx = (saved.currentIndex || 0) + 1;
+    let timing = "";
+    if (saved.endAt) {
+      const remaining = saved.endAt - Date.now();
+      if (remaining > 0) {
+        const min = Math.floor(remaining / 60000);
+        const sec = Math.floor((remaining % 60000) / 1000);
+        timing = ` · <strong>${min}:${String(sec).padStart(2, "0")}</strong> remaining`;
+      } else {
+        timing = ` · <strong>time expired</strong>`;
+      }
+    }
+    const ago = Math.round((Date.now() - (saved.savedAt || Date.now())) / 60000);
+    const agoText = ago < 1 ? "just now" : `${ago} min ago`;
+    banner.innerHTML = `
+      <div class="resume-banner-text">
+        <strong>Unfinished session</strong> — Question ${idx} of ${total}${timing}<br>
+        <small>Last saved ${agoText}.</small>
+      </div>
+      <div class="resume-banner-actions">
+        <button id="resume-btn" class="primary">Resume</button>
+        <button id="discard-btn">Discard</button>
+      </div>
+    `;
+    banner.classList.remove("hidden");
+    $("#resume-btn", banner).addEventListener("click", () => {
+      const fresh = loadActiveSession();
+      if (fresh) resumeSession(fresh);
+    });
+    $("#discard-btn", banner).addEventListener("click", () => {
+      if (confirm("Discard the unfinished session? Progress will be lost.")) {
+        clearActiveSession();
+        banner.classList.add("hidden");
+        banner.innerHTML = "";
+      }
     });
   }
 
@@ -902,6 +1057,7 @@
     if (name === "setup") {
       populateTopicCheckboxes();
       updateMatchCount();
+      renderResumeBanner();
     } else if (name === "history") {
       renderHistory();
     }
@@ -910,14 +1066,28 @@
 
   function bindTopbar() {
     $$(".nav-btn").forEach(b => {
+      // Don't bind the theme-toggle button as a screen-switcher.
+      if (b.id === "theme-toggle") return;
       b.addEventListener("click", () => switchScreen(b.dataset.screen));
     });
+    const themeBtn = document.getElementById("theme-toggle");
+    if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
   }
 
   // ============================================================
   // Bootstrap
   // ============================================================
   function init() {
+    // Apply the user's theme as soon as possible so we don't flash light.
+    applyTheme(preferredTheme());
+    // Honor OS theme changes if the user hasn't picked one explicitly.
+    if (window.matchMedia) {
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      mq.addEventListener && mq.addEventListener("change", () => {
+        if (!getStoredTheme()) applyTheme(mq.matches ? "dark" : "light");
+      });
+    }
+
     if (!window.QUESTIONS || !Array.isArray(window.QUESTIONS) || window.QUESTIONS.length === 0) {
       const main = document.querySelector("main");
       main.innerHTML = `<div style="padding:2rem; text-align:center; color: var(--wrong);">
@@ -933,6 +1103,7 @@
     bindHistoryControls();
     populateTopicCheckboxes();
     updateMatchCount();
+    renderResumeBanner();
   }
 
   if (document.readyState === "loading") {

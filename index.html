@@ -11,8 +11,9 @@
 <header class="topbar">
   <h1>Praxis 5003 — Math Practice</h1>
   <nav>
-    <button class="nav-btn" data-screen="setup">New Session</button>
+    <button class="nav-btn" data-screen="setup">New</button>
     <button class="nav-btn" data-screen="history">History</button>
+    <button id="theme-toggle" class="nav-btn theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌗</button>
   </nav>
 </header>
 
@@ -20,6 +21,7 @@
 
   <!-- ============== SETUP SCREEN ============== -->
   <section id="screen-setup" class="screen active">
+    <div id="resume-banner" class="resume-banner hidden"></div>
     <h2>Configure your practice session</h2>
 
     <div class="setup-grid">
@@ -150,7 +152,9 @@
   <section id="screen-history" class="screen">
     <h2>Score History</h2>
     <div id="history-empty" class="hidden">No sessions yet. <a href="#" id="history-back-link">Start one →</a></div>
-    <canvas id="history-chart" width="700" height="240"></canvas>
+    <div class="history-chart-wrap">
+      <canvas id="history-chart" width="700" height="240"></canvas>
+    </div>
     <div id="history-list" class="history-list"></div>
     <div class="setup-actions">
       <button id="clear-history-btn">Clear history</button>
