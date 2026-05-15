@@ -9,3 +9,10 @@ __pycache__/
 node_modules/
 *.log
 .claude/worktrees/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
